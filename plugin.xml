@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware5/shopware/5.2/engine/Shopware/Components/Plugin/schema/plugin.xsd">
+
+    <label lang="de">instant.page Integration</label>
+    <label lang="en">instant.page Integration</label>
+
+    <version>1.2.0</version>
+    <copyright>NDX Media</copyright>
+    <license>MIT</license>
+    <link>https://ndxmedia.de</link>
+    <author>NDX Media</author>
+    <compatibility minVersion="5.0.0" maxVersion="5.99.99"/>
+</plugin>

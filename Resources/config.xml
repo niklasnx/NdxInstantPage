@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware5/shopware/5.2/engine/Shopware/Components/Plugin/schema/config.xsd">
+
+    <label lang="de">instant.page Integration</label>
+    <label lang="en">instant.page Integration</label>
+
+    <elements>
+        <element type="boolean" scope="shop">
+            <name>ndxInstantPageActive</name>
+            <label lang="de">Aktiv</label>
+            <label lang="en">Active</label>
+            <value>true</value>
+            <description lang="de">instant.page auf der Webseite aktivieren</description>
+            <description lang="en">Enable instant.page on the website</description>
+        </element>
+
+        <element type="text" scope="shop">
+            <name>ndxInstantPageVersion</name>
+            <label lang="de">instant.page Version</label>
+            <label lang="en">instant.page Version</label>
+            <value>5.2.0</value>
+            <description lang="de">Version der Bibliothek (z.B. 5.2.0). Die JS-Datei muss unter Resources/views/frontend/_public/src/js/instantpage-{version}.min.js vorhanden sein.</description>
+            <description lang="en">Library version (e.g. 5.2.0). The JS file must exist at Resources/views/frontend/_public/src/js/instantpage-{version}.min.js.</description>
+        </element>
+
+        <element type="boolean" scope="shop">
+            <name>ndxInstantPageAllowQueryString</name>
+            <label lang="de">URLs mit Query-Parametern vorladen</label>
+            <label lang="en">Preload URLs with query string</label>
+            <value>false</value>
+            <description lang="de">Standardmäßig werden URLs mit ? nicht vorgeladen. Aktivieren, um dies zu erlauben.</description>
+            <description lang="en">By default, URLs with ? are not preloaded. Enable to allow this.</description>
+        </element>
+
+        <element type="text" scope="shop">
+            <name>ndxInstantPageBlacklistSelectors</name>
+            <label lang="de">Blacklist CSS-Selektoren</label>
+            <label lang="en">Blacklist CSS selectors</label>
+            <value>a[href*="logout"], a[href*="checkout"]</value>
+            <description lang="de">Kommagetrennte CSS-Selektoren für Links, die nicht vorgeladen werden sollen. Beispiel: a[href*="logout"], a[href*="checkout"], a[href*="delete"]</description>
+            <description lang="en">Comma-separated CSS selectors for links that should not be preloaded. Example: a[href*="logout"], a[href*="checkout"], a[href*="delete"]</description>
+        </element>
+
+        <element type="boolean" scope="shop">
+            <name>ndxInstantPageWhitelist</name>
+            <label lang="de">Whitelist-Modus</label>
+            <label lang="en">Whitelist mode</label>
+            <value>false</value>
+            <description lang="de">Nur Links mit data-instant Attribut vorladen (data-instant muss manuell an den Link gesetzt werden)</description>
+            <description lang="en">Only preload links with data-instant attribute (data-instant must be manually set on the link)</description>
+        </element>
+
+        <element type="boolean" scope="shop">
+            <name>ndxInstantPageAllowExternalLinks</name>
+            <label lang="de">Externe Links vorladen</label>
+            <label lang="en">Preload external links</label>
+            <value>false</value>
+            <description lang="de">Erlaubt das Vorladen von externen Links (standardmäßig deaktiviert)</description>
+            <description lang="en">Allow preloading of external links (disabled by default)</description>
+        </element>
+
+        <element type="boolean" scope="shop">
+            <name>ndxInstantPageVaryAccept</name>
+            <label lang="de">Vary: Accept Workaround (Chromium &lt; 110)</label>
+            <label lang="en">Vary: Accept workaround (Chromium &lt; 110)</label>
+            <value>false</value>
+            <description lang="de">Aktivieren, wenn der Server Vary: Accept sendet und Chromium &lt; 110 unterstützt werden muss</description>
+            <description lang="en">Enable if the server sends Vary: Accept and Chromium &lt; 110 support is needed</description>
+        </element>
+    </elements>
+</config>
